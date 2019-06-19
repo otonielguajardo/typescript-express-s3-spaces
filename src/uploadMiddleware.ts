@@ -5,8 +5,6 @@ import { Request } from "express";
 import * as multer from "multer";
 import * as multerS3 from "multer-s3";
 
-const fileName = Date.now().toString(); //file.originalname;
-const saveAs = `test/${fileName}`;
 export const uploadMiddleware = multer({
   fileFilter: (req: Request, file, cb) => {
     // validate file
@@ -26,8 +24,9 @@ export const uploadMiddleware = multer({
     contentType: multerS3.AUTO_CONTENT_TYPE,
     acl: "public-read",
     key: (req: Request, file, cb): any => {
-      // save file to Spaces
-      cb(null, saveAs);
+      // save file to Spaces, you can use / to add folders directory
+      const fileName = Date.now().toString(); //file.originalname;
+      cb(null, `test/${fileName}`);
     }
   })
 }).array("upload", 1);
