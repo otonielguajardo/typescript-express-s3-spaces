@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+html {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+body {
+  margin: 5vh auto;
+  max-width: 350px;
+}
+
+p {
+  margin: 20px 0;
+}
+
+small {
+  background-color: yellow;
+}
+
+#img {
+  max-width: 350px;
+  max-height: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+label,
+input {
+  display: block;
+  margin: 5px 0;
+}
+
+pre {
+  counter-reset: line-numbering;
+  background: #ededed;
+  padding: 12px;
+  line-height: 140%;
+  margin: 20px 0;
+}

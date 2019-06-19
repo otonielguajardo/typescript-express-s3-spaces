@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Express Uploader for DigitalOcean Spaces</title>
+
+  <link rel="stylesheet" href="./style.css" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <h1>Express Uploader for DigitalOcean Spaces</h1>
+  <p>
+    Select a file and submit to upload an asset to your
+    DigitalOcean Space
+  </p>
+
+  <p><small>Accepts a single file only</small></p>
+
+  <input type="file" id="file" name="upload" multiple />
+  <button id="upload">Upload</button>
+  <button id="reset">Reset</button>
+
+  <pre id="msg">Loading...</pre>
+
+</body>
+
+</html>
